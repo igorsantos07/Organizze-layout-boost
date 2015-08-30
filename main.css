@@ -1,5 +1,24 @@
 @media only screen and (max-width: 1080px) {
-	body .container {
-		width: 920px !important;
-	}
+	/* aumenta a largura no formato meia-tela */
+	body .container { width: 920px !important; }
+
+	/* aumenta a largura das colunas do dashboard,
+	 * dando um pouco mais de espaço para a da direita */
+	body.dashboard .grid-cell.grid-1 { width: 400px !important; }
+	body.dashboard .grid-cell.grid-2 { width: 506px !important; }
+
+	/* otimizando o espaçamento no box de resumo financeiro */
+	body.dashboard #overview-chart { margin-left: 0 !important; }
+	body.dashboard #overview-chart .highcharts-container { margin: 0 auto !important; }
+	body.dashboard .widget_box.overview .accounts-list li a span.description { width: 120px !important; }
+
+	/* otimizando o espaço útil das top categorias e metas, usando 2 colunas */
+	body.dashboard .widget_box.top_expenses .box-content .grid .grid-cell.t60 { width: 60% !important; }
+	body.dashboard .widget_box.top_expenses .box-content .grid .grid-cell.t40 { width: 40% !important; }
+	body.dashboard .widget_box.budgets .box-content ul li { display: inline-block !important; width: 47%; }
+	body.dashboard .widget_box.budgets .box-content ul li span.info { width: 100px !important; }
+
+	/* alargando os botões de acesso rápido */
+	body.dashboard .widget_box.fast_add .fast-access ul li { width: 31% !important; }
+	body.dashboard .widget_box.fast_add .fast-access ul li a { width: 100% !important; }
 }
