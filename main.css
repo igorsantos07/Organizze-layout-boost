@@ -2,12 +2,21 @@
 	/* aumenta a largura no formato meia-tela */
 	body .container { width: 920px !important; }
 
-	/* aumenta a largura das colunas do dashboard,
-	 * dando um pouco mais de espaço para a da direita */
+	/* aumenta a largura das colunas do dashboard, dando um pouco mais de espaço para a da direita */
 	body.dashboard .grid-cell.grid-1 { width: 400px !important; }
 	body.dashboard .grid-cell.grid-2 { width: 506px !important; }
 
-	/* otimizando o espaçamento no box de resumo financeiro */
+	/* expremendo mais espaço, removendo espaçamentos e títulos */
+	body.dashboard .widget_box { padding: 10px !important; }
+	body.dashboard .widget_box .box-header { display: none !important; }
+	body.dashboard .widget_box .box-content { margin-top: 0 !important; }
+	body.dashboard .widget_box.bills_to_receive .overdue { margin-bottom: 0 !important; }
+	body.dashboard .widget_box.bills_to_pay .today { margin-bottom: 0 !important; }
+	body.dashboard .widget_box.credit_cards_overview .cards-list { margin-top: 0 !important; }
+	body.dashboard .widget_box.blog_feeds,
+	body.dashboard .widget_box.indication { display: none !important; }
+
+	/* otimizando o espaçamento no box de resumo financeiro e de valores pendurados */
 	body.dashboard #overview-chart { margin-left: 0 !important; }
 	body.dashboard #overview-chart .highcharts-container { margin: 0 auto !important; }
 	body.dashboard .widget_box.overview .accounts-list li a span.description { width: 120px !important; }
@@ -15,10 +24,23 @@
 	/* otimizando o espaço útil das top categorias e metas, usando 2 colunas */
 	body.dashboard .widget_box.top_expenses .box-content .grid .grid-cell.t60 { width: 60% !important; }
 	body.dashboard .widget_box.top_expenses .box-content .grid .grid-cell.t40 { width: 40% !important; }
+	body.dashboard .widget_box.top_expenses #top-expenses-chart-container { margin: 25px auto !important; }
 	body.dashboard .widget_box.budgets .box-content ul li { display: inline-block !important; width: 47%; }
 	body.dashboard .widget_box.budgets .box-content ul li span.info { width: 100px !important; }
+	body.dashboard .widget_box.budgets .box-content ul li:last-child {
+		border-bottom: 1px solid #F1F2F5 !important;
+		padding: 20px 5px !important;
+	}
 
 	/* alargando os botões de acesso rápido */
-	body.dashboard .widget_box.fast_add .fast-access ul li { width: 31% !important; }
+	body.dashboard .widget_box.fast_add { padding: 0 !important; }
+	body.dashboard .widget_box.fast_add .box-header { display: none !important; }
+	body.dashboard .widget_box.fast_add .box-content { margin-top: 0 !important; }
+	body.dashboard .widget_box.fast_add .fast-access ul li { width: 32% !important; margin: 0 2% 0 0 !important; }
 	body.dashboard .widget_box.fast_add .fast-access ul li a { width: 100% !important; }
+	body.dashboard .widget_box.fast_add .fast-access ul li:nth-child(3) { margin-right: 0 !important; }
+	body.dashboard .widget_box.fast_add .fast-access .transference a:hover {
+		background: #0099CC !important;
+		color: white !important;
+	}
 }
