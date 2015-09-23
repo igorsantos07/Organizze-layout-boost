@@ -21,7 +21,7 @@
 	/* otimizando o espaçamento no box de resumo financeiro e de valores pendurados */
 	body.dashboard #overview-chart { margin-left: 0 !important; }
 	body.dashboard #overview-chart .highcharts-container { margin: 0 auto !important; }
-	body.dashboard .widget_box.overview .accounts-list li a span.description { width: 120px !important; }
+	body.dashboard .widget_box.overview .accounts-list li a span.description { width: 200px !important; }
 
 	/* otimizando o espaço útil das top categorias e metas, usando 2 colunas */
 	body.dashboard .widget_box.top_expenses .box-content .grid .grid-cell.t60 { width: 60% !important; }
