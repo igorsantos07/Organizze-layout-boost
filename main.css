@@ -1,6 +1,8 @@
 @media only screen and (max-width: 1080px) {
 	/* aumenta a largura no formato meia-tela */
-	body .container { width: 920px !important; }
+	body .container, body .container .balance-bar .inner { width: 920px !important; }
+	body .container .balance-bar .inner .grid { padding-top: 5px !important; padding-bottom: 5px !important; }
+	body .container .balance-bar .inner .details-transactions td { padding: 10px !important; }
 
 	/* aumenta a largura das colunas do dashboard, dando um pouco mais de espaço para a da direita */
 	body.dashboard .grid-cell.grid-1 { width: 400px !important; }
