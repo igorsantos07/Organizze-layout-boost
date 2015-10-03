@@ -21,7 +21,18 @@
 	/* otimizando o espaçamento no box de resumo financeiro e de valores pendurados */
 	body.dashboard #overview-chart { margin-left: 0 !important; }
 	body.dashboard #overview-chart .highcharts-container { margin: 0 auto !important; }
-	body.dashboard .widget_box.overview .accounts-list li a span.description { width: 200px !important; }
+	body.dashboard .widget_box.overview .accounts-list li { width: 49% !important; display: inline-block !important; }
+	body.dashboard .widget_box.overview .accounts-list li:after { content: "" !important; }
+	body.dashboard .widget_box.overview .accounts-list li a {
+		width: auto !important;
+		display: block !important;
+		position: relative;
+	}
+	body.dashboard .widget_box.overview .accounts-list li a span.image { width: 55px !important; }
+	body.dashboard .widget_box.overview .accounts-list li a span.description,
+	body.dashboard .widget_box.overview .accounts-list li a span.value { position: absolute; left: 65px; }
+	body.dashboard .widget_box.overview .accounts-list li a span.description { top: 10px; }
+	body.dashboard .widget_box.overview .accounts-list li a span.value { bottom: 10px; }
 
 	/* otimizando o espaço útil das top categorias e metas, usando 2 colunas */
 	body.dashboard .widget_box.top_expenses .box-content .grid .grid-cell.t60 { width: 60% !important; }
