@@ -1,4 +1,9 @@
 @media only screen and (max-width: 1080px) {
+	body.dashboard section.content {
+			margin-top: 10px !important;
+			margin-bottom: 10px !important;
+	}
+
 	/* aumenta a largura no formato meia-tela */
 	body .container, body .container .balance-bar .inner { width: 920px !important; }
 	body .container .balance-bar .inner .grid { padding-top: 5px !important; padding-bottom: 5px !important; }
@@ -57,3 +62,5 @@
 		color: white !important;
 	}
 }
+
+body.dashboard footer.footer { display: none; }
