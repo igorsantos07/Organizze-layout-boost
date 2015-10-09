@@ -1,11 +1,11 @@
 {
   "update_url":"http://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
-  "version": "0.1",
+  "version": "0.2",
 
   "name": "Organizze Layout boost",
   "short_name": "Organizze Layout+",
-  "description": "Pequenas melhorias no layout do Organizze.",
+  "description": "Pequenas melhorias no layout e afins do Organizze.",
 
   "icons": {
       "48": "icons/icon48.png",
@@ -16,7 +16,8 @@
     "content_scripts": [
       {
         "matches": ["https://pessoal.organizze.com.br/*"],
-        "css": ["main.css"]
+        "css": ["main.css"],
+        "js": ["jquery-2.1.4.js", "main.js"]
       }
     ]
 
