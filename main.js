@@ -1,5 +1,5 @@
 $(function() {
-  $(document).on('dblclick', '.simple-popup.credit-card-bill tr.Transaction', function() {
+  $(document).on('dblclick', '#transactions-table .CreditCard.expense', function() {
     $tr = $(this);
     if ($tr.data('selected')) {
       $tr
