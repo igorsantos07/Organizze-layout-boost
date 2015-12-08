@@ -1,5 +1,5 @@
 $(function() {
-  $(document).on('dblclick', '#transactions-table .CreditCard.expense', function() {
+  $(document).on('dblclick', '#transactions-table tr.CreditCard', function() {
     $tr = $(this);
     if ($tr.data('selected')) {
       $tr
