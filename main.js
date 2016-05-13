@@ -1,4 +1,9 @@
 $(function() {
+
+/* ******************************************************************************* */
+/* ********************  LINE CHECKER FOR CREDIT CARD BILLS  ********************* */
+/* ******************************************************************************* */
+
   $(document).on('dblclick', '#transactions-table tr.CreditCard', function() {
     $tr = $(this)
     if ($tr.data('selected')) {
@@ -11,6 +16,25 @@ $(function() {
         .data('selected', true)
     }
   })
+
+/* ******************************************************************************* */
+/* ********************  ADDING ACTIVITY HISTORY TO SETTINGS  ******************** */
+/* ******************************************************************************* */
+
+var $settings = $('.configurations .drop-down-box ul')
+var userId = $settings.find('li').first().find('a').attr('href')
+userId = userId.substr(1)
+userId = userId.substr(0, userId.indexOf('/'))
+
+$settings.append($(
+  "<li>"+
+    "<a href='/"+userId+"/configuracoes/atividades'>Histórico de Atividades</a>"+
+  "</li>"
+))
+
+/* ******************************************************************************* */
+/* *******************  DOLLAR SIGN IN INTERNATIONAL ACCOUNTS  ******************* */
+/* ******************************************************************************* */
 
   function intoDollars($element) {
     $element = (typeof $element == 'object')? $element : $(this)
@@ -37,7 +61,8 @@ $(function() {
           
         }
         
-        $account.addClass('currencied') //this class avoids multiple runs when other mutations happen
+        //this class avoids multiple runs when other mutations happen
+        $account.addClass('currencied')
       })
     }
 

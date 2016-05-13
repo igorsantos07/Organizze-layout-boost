@@ -1,11 +1,11 @@
 {
   "update_url":"http://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
-  "version": "0.3",
+  "version": "0.4",
 
   "name": "Organizze Layout boost",
   "short_name": "Organizze Layout+",
-  "description": "Pequenas melhorias no layout e afins do Organizze.",
+  "description": "Pequenas melhorias na interface do Organizze.",
 
   "icons": {
       "48": "icons/icon48.png",
