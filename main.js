@@ -33,6 +33,25 @@ $settings.append($(
 ))
 
 /* ******************************************************************************* */
+/* ****************  CLEARS UP USELESS STRINGS IN BUDGETS WIDGET  **************** */
+/* ******************************************************************************* */
+
+//shortens up the main budget title
+$firstBudget = $('body.dashboard .widget_box.budgets .box-content ul li:first-child .info big')
+if ($firstBudget.text().indexOf('Meta geral de despesa') != -1) {
+  $firstBudget.text('Geral - despesas')
+}
+
+//removes empty cents
+$('body.dashboard .widget_box.budgets .box-content ul li').each(function() {
+  $(this).find('.info p strong').each(function() {
+    if (this.innerText.indexOf(',00') != -1) {
+      $(this).text(this.innerText.substr(0, this.innerText.length - 3))
+    }
+  })
+})
+
+/* ******************************************************************************* */
 /* *******************  DOLLAR SIGN IN INTERNATIONAL ACCOUNTS  ******************* */
 /* ******************************************************************************* */
 

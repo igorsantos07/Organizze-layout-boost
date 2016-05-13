@@ -38,13 +38,17 @@
 	body.dashboard .widget_box.overview .accounts-list li a span.value { position: absolute; left: 65px; }
 	body.dashboard .widget_box.overview .accounts-list li a span.description { top: 10px; }
 	body.dashboard .widget_box.overview .accounts-list li a span.value { bottom: 10px; }
+	body.dashboard .widget_box.overview .accounts-list li:last-child {
+		border-bottom: 1px solid #F1F2F5 !important;
+	}
 
 	/* otimizando o espaço útil das top categorias e metas, usando 2 colunas */
 	body.dashboard .widget_box.top_expenses .box-content .grid .grid-cell.t60 { width: 60% !important; }
 	body.dashboard .widget_box.top_expenses .box-content .grid .grid-cell.t40 { width: 40% !important; }
 	body.dashboard .widget_box.top_expenses #top-expenses-chart-container { margin: 25px auto !important; }
-	body.dashboard .widget_box.budgets .box-content ul li { display: inline-block !important; width: 47%; }
-	body.dashboard .widget_box.budgets .box-content ul li span.info { width: 100px !important; }
+	body.dashboard .widget_box.budgets .box-content ul li { display: inline-block !important; width: 47%; position: relative; }
+	body.dashboard .widget_box.budgets .box-content ul li span.info { width: 100px !important; white-space: nowrap; }
+	body.dashboard .widget_box.budgets .box-content ul li span.percentage big { position: absolute; right: 0; }
 	body.dashboard .widget_box.budgets .box-content ul li:last-child {
 		border-bottom: 1px solid #F1F2F5 !important;
 		padding: 20px 5px !important;
