@@ -1,7 +1,7 @@
 {
   "update_url":"http://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
-  "version": "0.4",
+  "version": "0.5",
 
   "name": "Organizze Layout boost",
   "short_name": "Organizze Layout+",
