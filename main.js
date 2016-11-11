@@ -89,8 +89,10 @@ $('body.dashboard .widget_box.budgets .box-content ul li').each(function() {
     var $table = $('table.transactions-table')
     if ($table.length > 0) {
       if ($('.filter-account .top-level').text().indexOf('$') >= 0) {
-        $table.find('td.amount:not(.dollar), .results-detail strong:not(.dollar)').each(intoDollars)
-        $('.details-transactions td big:not(.dollar), .final-balance strong:not(.dollar)').each(intoDollars)
+        $table.find('td.amount:not(.dollar)').each(intoDollars)
+		//FIXME: these two are dangerous, as they break data updates from Angular
+		//$table.find('.results-detail strong:not(.dollar)').each(intoDollars)
+        //$('.details-transactions td big:not(.dollar), .final-balance strong:not(.dollar)').each(intoDollars)
       }
     }
   }).observe(document, {
