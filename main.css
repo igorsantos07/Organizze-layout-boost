@@ -1,6 +1,10 @@
 body.dashboard .widget_box.accounts_overview .accounts-list li a span.description big { max-width: 200px !important; }
 
 @media only screen and (max-width: 1080px) {
+	body .container-legacy {
+		width: 90% !important;
+	}
+
 	body.dashboard section.content {
 			margin-top: 10px !important;
 			margin-bottom: 10px !important;
